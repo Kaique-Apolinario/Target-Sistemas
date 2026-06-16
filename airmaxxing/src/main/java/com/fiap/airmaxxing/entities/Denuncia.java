@@ -1,5 +1,20 @@
 package com.fiap.airmaxxing.entities;
 
+import java.time.LocalDateTime;
+
+
+import com.fiap.airmaxxing.enums.StatusDenuncia;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.Data;
+
+@Data
 @Entity
 public class Denuncia {
 
@@ -15,7 +30,6 @@ public class Denuncia {
 
     private String cidade;
 
-    private String status;
 
     private LocalDateTime dataCriacao;
 
