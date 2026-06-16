@@ -1,21 +1,18 @@
 package com.fiap.airmaxxing.entities;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 
+@Data
 @Entity
-public class Usuario {
-
+public class CategoriaFumaca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
     private String nome;
-
-    private String email;
-
-    private String tipo;
+    private String riscoSaude;
 }

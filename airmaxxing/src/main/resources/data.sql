@@ -1,52 +1,12 @@
-INSERT INTO usuario (nome, email)
-VALUES
-('João Silva', 'joao@email.com'),
-('Maria Souza', 'maria@email.com');
+INSERT INTO orgao_responsavel (nome) VALUES ('Corpo de Bombeiros');
+INSERT INTO orgao_responsavel (nome) VALUES ('Defesa Civil');
+INSERT INTO orgao_responsavel (nome) VALUES ('Secretaria de Meio Ambiente');
 
-INSERT INTO endereco (
-    logradouro,
-    numero,
-    bairro,
-    cidade,
-    cep
-)
-VALUES
-('Rua das Flores', '123', 'Centro', 'São Vicente', '11310-000'),
-('Rua dos Pinheiros', '45', 'Jardim Primavera', 'São Vicente', '11320-000');
+INSERT INTO categoria_fumaca (nome, risco_saude) VALUES ('Queima de Lixo Urbano', 'Alto (Gases tóxicos)');
+INSERT INTO categoria_fumaca (nome, risco_saude) VALUES ('Incêndio Florestal/Mato', 'Médio (Material particulado)');
+INSERT INTO categoria_fumaca (nome, risco_saude) VALUES ('Poluição Industrial', 'Alto (Químicos)');
 
-INSERT INTO orgao_responsavel (
-    nome,
-    regiao
-)
-VALUES
-('Secretaria Municipal do Meio Ambiente', 'Centro'),
-('Fiscalização Ambiental Zona Norte', 'Zona Norte');
-
-INSERT INTO denuncia (
-    descricao,
-    data_criacao,
-    status,
-    prioridade,
-    usuario_id,
-    endereco_id,
-    orgao_responsavel_id
-)
-VALUES
-(
-    'Queima frequente de lixo em terreno baldio',
-    CURRENT_TIMESTAMP,
-    'PENDENTE',
-    1,
-    1,
-    1,
-    1
-),
-(
-    'Fumaça intensa durante a noite',
-    CURRENT_TIMESTAMP,
-    'EM_ANALISE',
-    2,
-    2,
-    2,
-    2
-);
+INSERT INTO estimativa_duracao (intervalo_tempo) VALUES ('Há menos de 1 hora');
+INSERT INTO estimativa_duracao (intervalo_tempo) VALUES ('De 1 a 3 horas');
+INSERT INTO estimativa_duracao (intervalo_tempo) VALUES ('De 3 a 12 horas');
+INSERT INTO estimativa_duracao (intervalo_tempo) VALUES ('12 horas para cima');
